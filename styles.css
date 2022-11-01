@@ -10,10 +10,12 @@ table {
 
 table th {
     font-size: 1.25rem;
+    text-align: left;
 }
 
+table th,
 table td {
-    padding: 0.625rem;
+    padding: 1.25rem 0.625rem;
 }
 
 .container {
@@ -23,14 +25,16 @@ table td {
     height: 100vh;
     justify-content: center;
     width: 100vw;
+    flex-direction: column;
 }
 
 .button {
     border-radius: 5px;
+    border: 0;
     box-sizing: border-box;
     display: inline-block;
-    font-weight: bold;
     font-size: 1rem;
+    font-weight: bold;
     padding: 15px 30px;
     text-align: center;
     text-transform: capitalize;
@@ -41,22 +45,26 @@ table td {
     background-color: #ffd401;
 }
 
-.button.primary.is-hover {
+.button.primary.is-hover,
+.button.primary:hover {
     background-color: #2c355e;
     color: #dec23a;
 }
 
-.button.primary.is-pressed {
+.button.primary.is-pressed,
+.button.primary:active {
     background-color: #20263e;
     color: #fefdfd;
 }
 
-.button.primary.is-disabled {
+.button.primary.is-disabled,
+.button.primary:disabled {
     background-color: #e6e6e6;
     color: #7e7e7e;
 }
 
-.button.primary.is-focused {
+.button.primary.is-focused,
+.button.primary:focus {
     background-color: #ffd401;
     color: #130801;
     outline: 3px solid #37c0e0;
@@ -67,26 +75,28 @@ table td {
     outline: 3px solid #e5b981;
 }
 
-.button.secondary[class*="is-"]:not(.is-focused) {
+.button.secondary[class*="is-"]:not(.is-focused),
+.button.secondary:disabled {
     outline: none;
 }
-
+.button.secondary:hover,
 .button.secondary.is-hover {
     background-color: #ff8400;
     color: #000;
 }
 
+.button.secondary:active,
 .button.secondary.is-pressed {
     background-color: #f87e01;
     box-shadow: #f87e01;
     color: #000;
 }
-
+.button.secondary:disabled,
 .button.secondary.is-disabled {
     background-color: #f5f5f5;
     color: #7e7e7e;
 }
-
+.button.secondary:focus,
 .button.secondary.is-focused {
     background-color: #f5f5f4;
     color: #130801;
