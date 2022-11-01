@@ -1,12 +1,40 @@
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+table {
+    font-size: 32px;
+}
+
+table th {
+    font-size: 1.25rem;
+}
+
+table td {
+    padding: 0.625rem;
+}
+
+.container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
 .button {
-    background-color: magenta;
     border-radius: 5px;
+    box-sizing: border-box;
     display: inline-block;
-    font-family: Arial, sans-serif;
     font-weight: bold;
-    margin: 5px;
-    padding: 16px 48px;
+    font-size: 1rem;
+    padding: 15px 30px;
+    text-align: center;
     text-transform: capitalize;
+    width: 100%;
 }
 
 .button.primary {
@@ -30,6 +58,37 @@
 
 .button.primary.is-focused {
     background-color: #ffd401;
+    color: #130801;
+    outline: 3px solid #37c0e0;
+}
+
+.button.secondary {
+    background-color: #f5f5f5;
+    outline: 3px solid #e5b981;
+}
+
+.button.secondary[class*="is-"]:not(.is-focused) {
+    outline: none;
+}
+
+.button.secondary.is-hover {
+    background-color: #ff8400;
+    color: #000;
+}
+
+.button.secondary.is-pressed {
+    background-color: #f87e01;
+    box-shadow: #f87e01;
+    color: #000;
+}
+
+.button.secondary.is-disabled {
+    background-color: #f5f5f5;
+    color: #7e7e7e;
+}
+
+.button.secondary.is-focused {
+    background-color: #f5f5f4;
     color: #130801;
     outline: 3px solid #37c0e0;
 }
